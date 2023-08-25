@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Hero } from '../hero';
-import { HeroService } from '../service/hero.service';
-import { MessageService } from '../service/message.service';
+import { HeroService } from '../service/HeroService/hero.service';
+import { MessageService } from '../service/MessageService/message.service';
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -15,7 +15,7 @@ export class HeroesComponent {
   //   this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
   // }
   constructor(private heroService: HeroService) {}
-  
+
   ngOnInit(): void {
     this.getHeroes();
   }
